@@ -21,11 +21,6 @@ public class StreamClientAgent implements IStreamClientAgent{
 	protected final StreamFrameListener streamFrameListener;
 	protected final Dimension dimension;
 	protected Channel clientChannel;
-	
-	
-	
-	
-
 
 	public StreamClientAgent(StreamFrameListener streamFrameListener,
 			Dimension dimension) {

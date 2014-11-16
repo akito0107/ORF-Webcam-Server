@@ -17,7 +17,7 @@ public class StreamClient {
 	private final static Dimension dimension = new Dimension(320,240);
 	private final static SingleVideoDisplayWindow displayWindow = new SingleVideoDisplayWindow("Stream example",dimension);
 	protected final static Logger logger = LoggerFactory.getLogger(StreamClient.class);
-	public static void main(String[] args) {
+	public static void run() {
 		//setup the videoWindow
 		displayWindow.setVisible(true);
 		

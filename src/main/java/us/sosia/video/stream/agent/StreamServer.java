@@ -10,9 +10,8 @@ public class StreamServer {
 
 	/**
 	 * @author kerr
-	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void run() {
 		Webcam.setAutoOpenMode(true);
 		Webcam webcam = Webcam.getDefault();
 		Dimension dimension = new Dimension(320, 240);

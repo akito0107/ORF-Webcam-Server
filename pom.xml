@@ -9,20 +9,10 @@
 	<name>Webcam Capture - Live Vide Streaming Example</name>
 	<description>
 	    Example how to capture images from webcam and transcode into live stream
-	    send to remote peers. 
+	    send to remote peers.
+        Original developed by com.github.sarxos
 	</description>
 
-	<developers>
-	    <developer>
-	        <id>hepin1989</id>
-	        <email>hepin1989@gmail.com</email>
-	        <url>http://sosia.us</url>
-	        <roles>
-	           	<role>Developer</role>
-	        </roles>
-	    </developer>
-	</developers>
-	
 	<repositories>
 		<repository>
 			<id>xuggle repo</id>
@@ -56,6 +46,11 @@
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>1.7.3</version>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.2</version>
+        </dependency>
 	</dependencies>
 
 </project>
