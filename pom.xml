@@ -2,15 +2,15 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.sarxos</groupId>
-	<version>0.3.10</version>
+        <groupId>jp.ac.keio.sfc.ht.memsys</groupId>
+	<version>0.1.0</version>
 	<artifactId>webcam-capture-example-live-streaming</artifactId>
 
 	<name>Webcam Capture - Live Vide Streaming Example</name>
 	<description>
 	    Example how to capture images from webcam and transcode into live stream
 	    send to remote peers.
-        Original developed by com.github.sarxos
+            Originally developed by com.github.sarxos
 	</description>
 
 	<repositories>
@@ -18,13 +18,17 @@
 			<id>xuggle repo</id>
 			<url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url>
 		</repository>
+                <repository>
+                    <id>Sonatype OSS Snapshot Repository</id>
+                    <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+                </repository>
 	</repositories>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.github.sarxos</groupId>
-			<artifactId>webcam-capture</artifactId>
-			<version>${project.version}</version>
+		    <groupId>com.github.sarxos</groupId>
+		    <artifactId>webcam-capture</artifactId>
+		    <version>0.3.11-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>xuggle</groupId>
