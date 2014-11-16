@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.net.InetSocketAddress;
 
+import jp.ac.keio.sfc.ht.memsys.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +15,7 @@ public class StreamClient {
 	/**
 	 * @author kerr
 	 * */
-	private final static Dimension dimension = new Dimension(320,240);
+	private final static Dimension dimension = new Dimension(Constants.WIDTH,Constants.HEIGHT);
 	private final static SingleVideoDisplayWindow displayWindow = new SingleVideoDisplayWindow("Stream example",dimension);
 	protected final static Logger logger = LoggerFactory.getLogger(StreamClient.class);
 	public static void run() {
