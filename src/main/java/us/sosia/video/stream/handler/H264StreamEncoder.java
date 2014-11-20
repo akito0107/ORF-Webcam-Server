@@ -39,7 +39,7 @@ public class H264StreamEncoder extends OneToOneEncoder{
 		super();
 		this.dimension = dimension;
 		if (usingInternalFrameEncoder) {
-			frameEncoder = new FrameEncoder(4);
+			frameEncoder = new FrameEncoder(1);
 		}else {
 			frameEncoder = null;
 		}
@@ -50,7 +50,7 @@ public class H264StreamEncoder extends OneToOneEncoder{
 		//setup
 	 	iStreamCoder.setNumPicturesInGroupOfPictures(25);
 	 	
-		iStreamCoder.setBitRate(200000);
+		iStreamCoder.setBitRate(100000);
 		iStreamCoder.setBitRateTolerance(10000);
 		iStreamCoder.setPixelType(Type.YUV420P);
 		iStreamCoder.setHeight(dimension.height);

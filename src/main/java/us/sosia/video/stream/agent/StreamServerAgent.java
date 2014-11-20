@@ -36,13 +36,13 @@ public class StreamServerAgent implements IStreamServerAgent {
     protected volatile boolean isStreaming;
     protected ScheduledExecutorService timeWorker;
     protected ExecutorService encodeWorker;
-    protected int FPS = 10;
+    protected int FPS = 5;
     protected ScheduledFuture<?> imageGrabTaskFuture;
 
 
     final int learning = 100;
     int steps = 0;
-    double[][] cache = new double[Constants.HEIGHT][Constants.WIDTH];
+    //double[][] cache = new double[Constants.HEIGHT][Constants.WIDTH];
     final int THRESHOLD = 2000000;
 
     public StreamServerAgent(Webcam webcam, Dimension dimension) {
@@ -61,11 +61,13 @@ public class StreamServerAgent implements IStreamServerAgent {
         this.encodeWorker = Executors.newSingleThreadExecutor();
         this.h264StreamEncoder = new H264StreamEncoder(dimension, false);
 
+        /*
         for (int i = 0; i < Constants.HEIGHT; i++) {
             for (int j = 0; j < Constants.WIDTH; j++) {
                 cache[i][j] = 0.0;
             }
         }
+        */
 
     }
 
@@ -162,13 +164,14 @@ public class StreamServerAgent implements IStreamServerAgent {
                  * using this when the h264 encoder is inside this class
                  * */
 
-                if(Constants.LOCAL_PROCESSING) {
-                    backgroundSubtraction(img);
-                }
+        //        if(Constants.LOCAL_PROCESSING) {
+         //           backgroundSubtraction(img);
+          //      }
 
                 encodeWorker.execute(new EncodeTask(img));
             }
 
+            /*
             private void backgroundSubtraction(BufferedImage img) {
 
                 int width = img.getWidth();
@@ -213,6 +216,7 @@ public class StreamServerAgent implements IStreamServerAgent {
                     }
                 }
             }
+            */
         }
 
 
