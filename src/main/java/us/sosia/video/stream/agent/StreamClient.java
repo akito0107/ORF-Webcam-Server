@@ -3,6 +3,7 @@ package us.sosia.video.stream.agent;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.net.InetSocketAddress;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import jp.ac.keio.sfc.ht.memsys.Constants;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class StreamClient {
 	private final static Dimension dimension = new Dimension(Constants.WIDTH,Constants.HEIGHT);
 	private final static SingleVideoDisplayWindow displayWindow = new SingleVideoDisplayWindow("Stream example",dimension);
 	protected final static Logger logger = LoggerFactory.getLogger(StreamClient.class);
+
 	public static void run() {
 		//setup the videoWindow
 		displayWindow.setVisible(true);
@@ -34,7 +36,7 @@ public class StreamClient {
 		@Override
 		public void onFrameReceived(BufferedImage image) {
 			logger.info("frame received :{}",count++);
-			displayWindow.updateImage(image);			
+			displayWindow.updateImage(image);
 		}
 		
 	}

@@ -5,7 +5,7 @@ package jp.ac.keio.sfc.ht.memsys;
  */
 public class Constants {
 
-    public static final int WIDTH = 176;
-    public static final int HEIGHT = 144;
+    public static final int WIDTH = 640;
+    public static final int HEIGHT = 480;
     public static boolean LOCAL_PROCESSING = true;
 }
